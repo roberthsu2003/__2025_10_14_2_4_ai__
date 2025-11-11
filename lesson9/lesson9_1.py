@@ -6,11 +6,8 @@ def get_asset_path(filename: str) -> str:
     current_dir = os.path.dirname(os.path.abspath(__file__))
     return os.path.join(current_dir, 'assets', filename)
 
-
-
 def main():
     file_path = get_asset_path("names.txt")
-
     names: list[str] = tools.get_names(file_path)
     
     if not names:
